@@ -1,20 +1,23 @@
 package com.selenium.glue;
 
-import com.selenium.modules.GeneralModule.DesktopGeneralModule;
+import com.selenium.modules.GeneralModule.HomePageModule;
 import io.cucumber.java.en.Given;
-
+import org.openqa.selenium.WebDriver;
 
 
 public class GeneralSteps {
 
-    private DesktopGeneralModule desktopGeneralModule;
+    private WebDriver webDriver;
+    private HomePageModule homePageModule;
 
-    public GeneralSteps(DesktopGeneralModule desktopGeneralModule) {
-        this.desktopGeneralModule = desktopGeneralModule;
+
+    public void HomePageModule(WebDriver webDriver) {
+        homePageModule = new HomePageModule(webDriver);
     }
+
 
     @Given("Navigate to {string}")
     public void navigateTo(String url) {
-        desktopGeneralModule.navigateToUrl(url);
+        homePageModule.navigateToUrl(url);
     }
 }

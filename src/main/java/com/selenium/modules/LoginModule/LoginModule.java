@@ -11,7 +11,6 @@ public class LoginModule extends WebDriverModule {
         super(webDriver);
     }
     public void userNavigateToLogin() {
-
         loginPage.userNavigateToLogin();
     }
 
