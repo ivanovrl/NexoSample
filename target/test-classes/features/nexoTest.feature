@@ -4,9 +4,9 @@ Feature: Nexo test
     Given Navigate to "<URL>"
     And Login successfully
     And Open Book store page
-    When Search for "ECMAScript 6"
-    Then Results contain "Understanding ECMAScript 6" title
+    When Search for "<Search_term>"
+    Then Results contain "<Book_Title>" title
 
     Examples:
-      | URL                |
-      | https://demoqa.com |
+      | URL                | Search_term  | Book_Title                 |
+      | https://demoqa.com | ECMAScript 6 | Understanding ECMAScript 6 |
